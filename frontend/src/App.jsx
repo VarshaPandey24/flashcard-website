@@ -8,9 +8,6 @@ import Admin from "./components/Admin/Admin";
 import Flipcard from './components/Flipcard/Flipcard';
 import FlipCardApp from './FlipCardApp';
 
-
-
-
 const App = () => {
   return (
     <div className='App'>
