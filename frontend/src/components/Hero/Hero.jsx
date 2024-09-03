@@ -23,7 +23,7 @@ function Hero() {
           </div>
         </div>
         <div className="flexColStart hero-right">
-            <img className='pile' src="./pile.jpg" alt="card" />
+            <img className='pile' src="./src/assets/pile.jpg" alt="card" />
         </div>
       </div>
     </div>
