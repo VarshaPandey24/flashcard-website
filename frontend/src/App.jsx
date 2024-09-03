@@ -13,8 +13,7 @@ const App = () => {
     <div className='App'>
       
       <Navbar/>
-      <Hero/>
-      
+      <Hero/>  
     <FlipCardApp/>
     
     
