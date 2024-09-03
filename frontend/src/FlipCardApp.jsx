@@ -11,24 +11,24 @@ const FlipCardApp = () => {
 
     useEffect(() => {
         const fetchFlashcards = async () => {
-            const response = await axios.get('https://flashcard-website-mu.vercel.app/');
+            const response = await axios.get('http://localhost:5173/');
             setFlashcards(response.data);
         };
         fetchFlashcards();
     }, []);
 
     const addFlashcard = async (newFlashcard) => {
-        const response = await axios.post('https://flashcard-website-mu.vercel.app/', newFlashcard);
+        const response = await axios.post('http://localhost:5173/', newFlashcard);
         setFlashcards([...flashcards, response.data]);
     };
 
     const updateFlashcard = async (id, updatedFlashcard) => {
-        const response = await axios.put(`https://flashcard-website-mu.vercel.app/${id}`, updatedFlashcard);
+        const response = await axios.put(`http://localhost:5173/${id}`, updatedFlashcard);
         setFlashcards(flashcards.map(card => (card.id === id ? response.data : card)));
     };
 
     const deleteFlashcard = async (id) => {
-        await axios.delete(`https://flashcard-website-mu.vercel.app/${id}`);
+        await axios.delete(`http://localhost:5173/${id}`);
         setFlashcards(flashcards.filter(card => card.id !== id));
     };
 
